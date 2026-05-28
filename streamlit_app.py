@@ -2,12 +2,9 @@ import streamlit as st
 
 st.title("아폴로니우스의 원 그리기")
 
-st.write("아폴로니우스의 원은 두 고정점 A, B에 대해 PA : PB = m : n을 만족하는 점 P의 자취입니다.")
-
-col1, col2 = st.columns(2)
-with col1:
-    st.text_input("비율 m", value="2", placeholder="예: 2")
-with col2:
-    st.text_input("비율 n", value="1", placeholder="예: 1")
-
-st.caption("이 두 비율을 입력하면 A, B 사이의 아폴로니우스의 원을 시각적으로 확인할 수 있습니다.")
+st.write(
+    "아폴로니우스의 원은 두 고정점 A, B에 대하여, 점 P가 이 두 점을 잇는 선분을 내분 또는 외분하는 비율 PA : PB = m : n을 만족할 때 생기는 점들의 자취입니다. "
+    "즉, P는 A와 B 사이의 내분점·외분점과 관련된 비율 조건을 만족하는 모든 점을 모은 곡선입니다."
+)
+st.text_input("비율을 입력하세요", placeholder="예: 2:1")
+st.write("이곳에 비율을 입력하면 아폴로니우스의 원을 그릴 수 있습니다.")
